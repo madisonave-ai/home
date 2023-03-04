@@ -1,15 +1,20 @@
-import React from "react";
-import logo from "./ma-logo.jpeg";
-import "./App.css";
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './Routes';
+import Page from './components/Page';
 
-function App() {
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import 'aos/dist/aos.css';
+
+const App = (): JSX.Element => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-    </div>
+    <Page>
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
+    </Page>
   );
-}
+};
 
 export default App;
