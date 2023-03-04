@@ -21,18 +21,13 @@ const ContactPageCover = (): JSX.Element => {
       position={'sticky'}
       top={0}
     >
-      <Box
-        display={'flex'}
-        alignItems={'center'}
-        height={1}
-        width={1}
-      >
+      <Box display={'flex'} alignItems={'center'} height={1} width={1}>
         <Box
           component={'img'}
           loading="lazy"
           height={1}
           width={1}
-          src={'https://assets.maccarianagency.com/backgrounds/img23.jpg'}
+          src={'/images/img23.jpg'}
           alt="..."
           sx={{
             objectFit: 'cover',

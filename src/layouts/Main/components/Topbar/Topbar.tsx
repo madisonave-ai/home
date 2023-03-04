@@ -127,11 +127,11 @@ const Topbar = ({
       <Link
         underline="none"
         component="a"
-        href="#/about"
+        href="#/contact-us"
         color={colorInvert ? 'common.white' : 'text.primary'}
         sx={{ display: 'flex', alignItems: 'center' }}
       >
-        About Us
+        Contact Us
       </Link>
 
       {/* <Box sx={{ display: { xs: 'flex', md: 'none' } }} alignItems={'center'}>

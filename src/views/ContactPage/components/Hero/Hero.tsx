@@ -30,8 +30,10 @@ const Hero = (): JSX.Element => {
               color="text.secondary"
               sx={{ fontWeight: 400 }}
             >
-              theFront will make your product look modern and professional while
-              saving you precious time.
+              Are you interested in learning more about us? Contact us today for
+              more information! Our friendly and knowledgeable staff are here to
+              answer any questions you may have and provide you with the
+              information you need. We look forward to hearing from you!
             </Typography>
           </Box>
         </Box>

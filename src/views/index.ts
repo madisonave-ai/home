@@ -1,3 +1,4 @@
+export { default as Privacy } from './Privacy';
 export { default as Home } from './Home';
 export { default as IndexView } from './IndexView';
 export { default as Customers } from './Customers';
