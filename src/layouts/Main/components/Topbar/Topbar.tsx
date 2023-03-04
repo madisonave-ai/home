@@ -127,7 +127,7 @@ const Topbar = ({
       <Link
         underline="none"
         component="a"
-        href="/about"
+        href="#/about"
         color={colorInvert ? 'common.white' : 'text.primary'}
         sx={{ display: 'flex', alignItems: 'center' }}
       >
