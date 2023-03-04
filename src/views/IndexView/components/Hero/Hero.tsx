@@ -7,74 +7,56 @@ import { alpha, useTheme } from '@mui/material/styles';
 
 import Container from 'components/Container';
 
-// const images = [
-//   {
-//     group: [
-//       {
-//         cover:
-//           'https://assets.maccarianagency.com/screenshots/the-front/img1.png',
-//         coverDark:
-//           'https://assets.maccarianagency.com/screenshots/the-front/img1--dark.png',
-//       },
-//       {
-//         cover:
-//           'https://assets.maccarianagency.com/screenshots/the-front/img4.png',
-//         coverDark:
-//           'https://assets.maccarianagency.com/screenshots/the-front/img4--dark.png',
-//       },
-//     ],
-//   },
-//   {
-//     group: [
-//       {
-//         cover:
-//           'https://assets.maccarianagency.com/screenshots/the-front/img13.png',
-//         coverDark:
-//           'https://assets.maccarianagency.com/screenshots/the-front/img13--dark.png',
-//       },
-//       {
-//         cover:
-//           'https://assets.maccarianagency.com/screenshots/the-front/img10.png',
-//         coverDark:
-//           'https://assets.maccarianagency.com/screenshots/the-front/img10--dark.png',
-//       },
-//       {
-//         cover:
-//           'https://assets.maccarianagency.com/screenshots/the-front/img7.png',
-//         coverDark:
-//           'https://assets.maccarianagency.com/screenshots/the-front/img7--dark.png',
-//       },
-//     ],
-//   },
-//   {
-//     group: [
-//       {
-//         cover:
-//           'https://assets.maccarianagency.com/screenshots/the-front/img6.png',
-//         coverDark:
-//           'https://assets.maccarianagency.com/screenshots/the-front/img6--dark.png',
-//       },
-//       {
-//         cover:
-//           'https://assets.maccarianagency.com/screenshots/the-front/img24.png',
-//         coverDark:
-//           'https://assets.maccarianagency.com/screenshots/the-front/img24--dark.png',
-//       },
-//       {
-//         cover:
-//           'https://assets.maccarianagency.com/screenshots/the-front/img17.png',
-//         coverDark:
-//           'https://assets.maccarianagency.com/screenshots/the-front/img17--dark.png',
-//       },
-//       {
-//         cover:
-//           'https://assets.maccarianagency.com/screenshots/the-front/img12.png',
-//         coverDark:
-//           'https://assets.maccarianagency.com/screenshots/the-front/img12--dark.png',
-//       },
-//     ],
-//   },
-// ];
+const images = [
+  {
+    group: [
+      {
+        cover: 'https://cdn.madisonave.ai/images/system/home/hero-1.png',
+        coverDark: 'https://cdn.madisonave.ai/images/system/home/hero-1.png',
+      },
+      {
+        cover: 'https://cdn.madisonave.ai/images/system/home/hero-2.png',
+        coverDark: 'https://cdn.madisonave.ai/images/system/home/hero-2.png',
+      },
+    ],
+  },
+  {
+    group: [
+      {
+        cover: 'https://cdn.madisonave.ai/images/system/home/hero-3.png',
+        coverDark: 'https://cdn.madisonave.ai/images/system/home/hero-3.png',
+      },
+      {
+        cover: 'https://cdn.madisonave.ai/images/system/home/hero-4.png',
+        coverDark: 'https://cdn.madisonave.ai/images/system/home/hero-4.png',
+      },
+      {
+        cover: 'https://cdn.madisonave.ai/images/system/home/hero-5.png',
+        coverDark: 'https://cdn.madisonave.ai/images/system/home/hero-5.png',
+      },
+    ],
+  },
+  {
+    group: [
+      {
+        cover: 'https://cdn.madisonave.ai/images/system/home/hero-6.png',
+        coverDark: 'https://cdn.madisonave.ai/images/system/home/hero-6.png',
+      },
+      {
+        cover: 'https://cdn.madisonave.ai/images/system/home/hero-7.png',
+        coverDark: 'https://cdn.madisonave.ai/images/system/home/hero-7.png',
+      },
+      {
+        cover: 'https://cdn.madisonave.ai/images/system/home/hero-8.png',
+        coverDark: 'https://cdn.madisonave.ai/images/system/home/hero-8.png',
+      },
+      {
+        cover: 'https://cdn.madisonave.ai/images/system/home/hero-9.png',
+        coverDark: 'https://cdn.madisonave.ai/images/system/home/hero-9.png',
+      },
+    ],
+  },
+];
 
 const Hero = (): JSX.Element => {
   const theme = useTheme();
@@ -172,7 +154,7 @@ const Hero = (): JSX.Element => {
         </Container>
         <Box
           sx={{
-            // transform: 'rotate(-20deg)',
+            transform: 'rotate(-20deg)',
             display: { xs: 'none', sm: 'block' },
           }}
         >
@@ -183,25 +165,25 @@ const Hero = (): JSX.Element => {
             top={0}
             position={'absolute'}
             sx={{
-              transform: 'translate3d(20%, 40%, 0)',
-              // transform: 'translate3d(20%, -50%, 0)'
+              // transform: 'translate3d(20%, 40%, 0)',
+              transform: 'translate3d(20%, -50%, 0)',
             }}
           >
-            <Box
+            {/* <Box
               component={'img'}
               loading="lazy"
               src={'/images/robot-head.png'}
               height={1}
               width={1}
               maxWidth={320}
-            />
+            /> */}
 
-            {/* {images.map((item, i) => (
+            {images.map((item, i) => (
               <Box key={i} marginTop={{ sm: -(i * 16) }} marginX={1}>
                 {item.group.map((g, j) => (
                   <Box
                     key={j}
-                    padding={1}
+                    // padding={1}
                     bgcolor={'background.paper'}
                     borderRadius={2}
                     boxShadow={3}
@@ -209,6 +191,9 @@ const Hero = (): JSX.Element => {
                   >
                     <Box
                       component={'img'}
+                      borderRadius={2}
+                      boxShadow={3}
+                      mb={'-5px'}
                       loading="lazy"
                       src={
                         theme.palette.mode === 'dark' ? g.coverDark : g.cover
@@ -220,7 +205,7 @@ const Hero = (): JSX.Element => {
                   </Box>
                 ))}
               </Box>
-            ))} */}
+            ))}
           </Box>
         </Box>
       </Box>

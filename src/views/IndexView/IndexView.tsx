@@ -10,6 +10,7 @@ import {
   Services,
   // Benefits,
   Hero,
+  Partners,
 } from './components';
 
 const IndexView = (): JSX.Element => {
@@ -36,6 +37,9 @@ const IndexView = (): JSX.Element => {
           </Container>
           <Container>
             <Features />
+          </Container>
+          <Container>
+            <Partners />
           </Container>
           <Box
             component={'svg'}

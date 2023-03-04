@@ -10,23 +10,23 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 
-const mock = [
-  {
-    title: 'Zemanta',
-    subtitle: 'Zemanta',
-    suffix: '',
-  },
-  {
-    title: 'Facebook',
-    subtitle: 'Facebook',
-    suffix: '',
-  },
-  {
-    title: 'Google',
-    subtitle: 'Coming soon...',
-    suffix: '',
-  },
-];
+// const mock = [
+//   {
+//     title: 'Zemanta',
+//     subtitle: 'Zemanta',
+//     suffix: '',
+//   },
+//   {
+//     title: 'Facebook',
+//     subtitle: 'Facebook',
+//     suffix: '',
+//   },
+//   {
+//     title: 'Google',
+//     subtitle: 'Coming soon...',
+//     suffix: '',
+//   },
+// ];
 
 const Features = (): JSX.Element => {
   const theme = useTheme();
@@ -63,12 +63,12 @@ const Features = (): JSX.Element => {
               ease.
             </Typography>
           </Box>
-          <Grid container spacing={2}>
+          {/* <Grid container spacing={2}>
             {mock.map((item, i) => (
               <Grid key={i} item xs={12} md={4}>
                 <Typography variant="h4" color={'primary'} gutterBottom>
                   {item.title}
-                  {/* <VisibilitySensor
+                  <VisibilitySensor
                     onChange={(isVisible) => setViewPortVisibility(isVisible)}
                     delayedCall
                   >
@@ -78,14 +78,14 @@ const Features = (): JSX.Element => {
                       start={0}
                       suffix={item.suffix}
                     />
-                  </VisibilitySensor> */}
+                  </VisibilitySensor>
                 </Typography>
                 <Typography color="text.secondary" component="p">
                   {item.subtitle}
                 </Typography>
               </Grid>
             ))}
-          </Grid>
+          </Grid> */}
         </Grid>
         <Grid
           item

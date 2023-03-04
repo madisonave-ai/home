@@ -46,14 +46,12 @@ const Hero = (): JSX.Element => {
           justifyContent={'center'}
           alignItems={'center'}
         >
-          <Box height={1} width={1} maxWidth={500}>
+          <Box height={1} width={1} maxWidth={300}>
             <Box
               component={'img'}
-              src={
-                'https://assets.maccarianagency.com/svg/illustrations/drawkit-illustration6.svg'
-              }
-              width={1}
+              src={'/images/robot-head.png'}
               height={1}
+              width={1}
               sx={{
                 filter:
                   theme.palette.mode === 'dark' ? 'brightness(0.8)' : 'none',

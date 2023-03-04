@@ -1,4 +1,5 @@
 export { default as Hero } from './Hero';
+export { default as Partners } from './Partners';
 export { default as Services } from './Services';
 export { default as QuickStart } from './QuickStart';
 export { default as Features } from './Features';
