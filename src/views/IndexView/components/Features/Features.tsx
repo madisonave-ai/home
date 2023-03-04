@@ -1,7 +1,7 @@
 // /* eslint-disable react/no-unescaped-entities */
-import React, { useState } from 'react';
-import CountUp from 'react-countup';
-import VisibilitySensor from 'react-visibility-sensor';
+// import React, { useState } from 'react';
+// import CountUp from 'react-countup';
+// import VisibilitySensor from 'react-visibility-sensor';
 import { useTheme } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
@@ -34,14 +34,14 @@ const Features = (): JSX.Element => {
     defaultMatches: true,
   });
 
-  const [viewPortEntered, setViewPortEntered] = useState(false);
-  const setViewPortVisibility = (isVisible) => {
-    if (viewPortEntered) {
-      return;
-    }
+  // const [viewPortEntered, setViewPortEntered] = useState(false);
+  // const setViewPortVisibility = (isVisible) => {
+  //   if (viewPortEntered) {
+  //     return;
+  //   }
 
-    setViewPortEntered(isVisible);
-  };
+  //   setViewPortEntered(isVisible);
+  // };
 
   return (
     <Box>

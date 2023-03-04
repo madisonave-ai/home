@@ -1,10 +1,13 @@
-import React from 'react';
+// import React from 'react';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import { alpha, useTheme } from '@mui/material/styles';
-import MenuIcon from '@mui/icons-material/Menu';
+// import Button from '@mui/material/Button';
+import {
+  // alpha,
+  useTheme,
+} from '@mui/material/styles';
+// import MenuIcon from '@mui/icons-material/Menu';
 
-import { NavItem } from './components';
+// import { NavItem } from './components';
 import { Link, Typography } from '@mui/material';
 
 interface Props {
@@ -22,20 +25,20 @@ interface Props {
 }
 
 const Topbar = ({
-  onSidebarOpen,
-  pages,
+  // onSidebarOpen,
+  // pages,
   colorInvert = false,
 }: Props): JSX.Element => {
   const theme = useTheme();
   const { mode } = theme.palette;
-  const {
-    landings: landingPages,
-    secondary: secondaryPages,
-    company: companyPages,
-    account: accountPages,
-    portfolio: portfolioPages,
-    blog: blogPages,
-  } = pages;
+  // const {
+  //   landings: landingPages,
+  //   secondary: secondaryPages,
+  //   company: companyPages,
+  //   account: accountPages,
+  //   portfolio: portfolioPages,
+  //   blog: blogPages,
+  // } = pages;
 
   return (
     <Box

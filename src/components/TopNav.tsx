@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
-import Typography from '@mui/material/Typography';
+// import Link from '@mui/material/Link';
+// import Typography from '@mui/material/Typography';
 
 import ThemeModeToggler from 'components/ThemeModeToggler';
 
@@ -12,6 +12,7 @@ interface Props {
 const TopNav = ({ colorInvert = false }: Props): JSX.Element => {
   return (
     <Box display={'flex'} justifyContent={'flex-end'} alignItems={'center'}>
+      <Box display={colorInvert ? 'none' : 'none'} />
       {/* <Box marginRight={{ xs: 1, sm: 2 }}>
         <Link
           underline="none"
