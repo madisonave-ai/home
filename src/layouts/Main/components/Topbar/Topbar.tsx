@@ -8,7 +8,8 @@ import {
 // import MenuIcon from '@mui/icons-material/Menu';
 
 // import { NavItem } from './components';
-import { Link, Typography } from '@mui/material';
+import { Link, Stack, Typography } from '@mui/material';
+import ThemeModeToggler from 'components/ThemeModeToggler';
 
 interface Props {
   // eslint-disable-next-line @typescript-eslint/ban-types
@@ -41,23 +42,21 @@ const Topbar = ({
   // } = pages;
 
   return (
-    <Box
-      display={'flex'}
-      justifyContent={'space-between'}
-      alignItems={'center'}
-      width={1}
-    >
+    <Stack direction={'row'} alignItems={'center'} width={1} spacing={2}>
       <Box
         display={'flex'}
         component="a"
+        flex={1}
         href="/"
         title="MadisonAve AI"
         height={{ xs: 50, md: 65 }}
+        alignItems={'center'}
         sx={{ textDecoration: 'none' }}
       >
         <Box
           component={'img'}
           alignItems={'center'}
+          borderRadius={'50%'}
           src={
             mode === 'light' && !colorInvert
               ? '/apple-touch-icon.png'
@@ -133,6 +132,9 @@ const Topbar = ({
       >
         Contact Us
       </Link>
+      <Box>
+        <ThemeModeToggler />
+      </Box>
 
       {/* <Box sx={{ display: { xs: 'flex', md: 'none' } }} alignItems={'center'}>
         <Button
@@ -149,7 +151,7 @@ const Topbar = ({
           <MenuIcon />
         </Button>
       </Box> */}
-    </Box>
+    </Stack>
   );
 };
 
