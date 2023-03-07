@@ -11,48 +11,48 @@ const images = [
   {
     group: [
       {
-        cover: 'https://cdn.madisonave.ai/images/system/home/hero-1.png',
-        coverDark: 'https://cdn.madisonave.ai/images/system/home/hero-1.png',
+        cover: 'https://cdn.madisonave.ai/assets/home/hero-1.png',
+        coverDark: 'https://cdn.madisonave.ai/assets/home/hero-1.png',
       },
       {
-        cover: 'https://cdn.madisonave.ai/images/system/home/hero-2.png',
-        coverDark: 'https://cdn.madisonave.ai/images/system/home/hero-2.png',
-      },
-    ],
-  },
-  {
-    group: [
-      {
-        cover: 'https://cdn.madisonave.ai/images/system/home/hero-3.png',
-        coverDark: 'https://cdn.madisonave.ai/images/system/home/hero-3.png',
-      },
-      {
-        cover: 'https://cdn.madisonave.ai/images/system/home/hero-4.png',
-        coverDark: 'https://cdn.madisonave.ai/images/system/home/hero-4.png',
-      },
-      {
-        cover: 'https://cdn.madisonave.ai/images/system/home/hero-5.png',
-        coverDark: 'https://cdn.madisonave.ai/images/system/home/hero-5.png',
+        cover: 'https://cdn.madisonave.ai/assets/home/hero-2.png',
+        coverDark: 'https://cdn.madisonave.ai/assets/home/hero-2.png',
       },
     ],
   },
   {
     group: [
       {
-        cover: 'https://cdn.madisonave.ai/images/system/home/hero-6.png',
-        coverDark: 'https://cdn.madisonave.ai/images/system/home/hero-6.png',
+        cover: 'https://cdn.madisonave.ai/assets/home/hero-3.png',
+        coverDark: 'https://cdn.madisonave.ai/assets/home/hero-3.png',
       },
       {
-        cover: 'https://cdn.madisonave.ai/images/system/home/hero-7.png',
-        coverDark: 'https://cdn.madisonave.ai/images/system/home/hero-7.png',
+        cover: 'https://cdn.madisonave.ai/assets/home/hero-4.png',
+        coverDark: 'https://cdn.madisonave.ai/assets/home/hero-4.png',
       },
       {
-        cover: 'https://cdn.madisonave.ai/images/system/home/hero-8.png',
-        coverDark: 'https://cdn.madisonave.ai/images/system/home/hero-8.png',
+        cover: 'https://cdn.madisonave.ai/assets/home/hero-5.png',
+        coverDark: 'https://cdn.madisonave.ai/assets/home/hero-5.png',
+      },
+    ],
+  },
+  {
+    group: [
+      {
+        cover: 'https://cdn.madisonave.ai/assets/home/hero-6.png',
+        coverDark: 'https://cdn.madisonave.ai/assets/home/hero-6.png',
       },
       {
-        cover: 'https://cdn.madisonave.ai/images/system/home/hero-9.png',
-        coverDark: 'https://cdn.madisonave.ai/images/system/home/hero-9.png',
+        cover: 'https://cdn.madisonave.ai/assets/home/hero-7.png',
+        coverDark: 'https://cdn.madisonave.ai/assets/home/hero-7.png',
+      },
+      {
+        cover: 'https://cdn.madisonave.ai/assets/home/hero-8.png',
+        coverDark: 'https://cdn.madisonave.ai/assets/home/hero-8.png',
+      },
+      {
+        cover: 'https://cdn.madisonave.ai/assets/home/hero-9.png',
+        coverDark: 'https://cdn.madisonave.ai/assets/home/hero-9.png',
       },
     ],
   },

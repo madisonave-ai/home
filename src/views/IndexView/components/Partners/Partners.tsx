@@ -23,7 +23,7 @@ const Partners = (): JSX.Element => {
           component="img"
           height={100}
           key={i}
-          src={`https://cdn.madisonave.ai/images/system/networks/${item}.png`}
+          src={`https://cdn.madisonave.ai/assets/networks/${item}.png`}
           alt={item}
           sx={{
             filter:
