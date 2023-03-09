@@ -17,7 +17,6 @@
     "codeStyle:fix": "npm run prettier:fix && npm run eslint:fix",
     "clear-all": "rimraf ./build ./node_modules"
   },
-  "proxy":"https://fn.madisonave.ai",
   "eslintConfig": {
     "extends": [
       "react-app"
