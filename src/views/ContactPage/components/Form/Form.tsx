@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import { useTheme } from '@mui/material/styles';
@@ -9,7 +9,8 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { Divider } from '@mui/material';
+import { Divider, Snackbar, Alert, CircularProgress } from '@mui/material';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const validationSchema = yup.object({
   fullName: yup
@@ -28,18 +29,35 @@ const validationSchema = yup.object({
 
 const Form = (): JSX.Element => {
   const theme = useTheme();
+  const captchaRef = useRef(null);
+  const [isError, setIsError] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isSending, setIsSending] = useState(false);
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
   });
-
   const initialValues = {
     fullName: '',
     message: '',
     email: '',
   };
 
-  const onSubmit = (values) => {
-    return values;
+  const onSubmit = async (values) => {
+    setIsSending(true);
+    const token = await captchaRef.current.executeAsync();
+    values['token']=token;
+    const url=process.env.REACT_APP_CONTACT_FORM_URL;
+    const res=await fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(values)
+    });    
+    if (res.ok){
+      setIsSuccess(true);
+    } else
+    {
+      setIsError(true);
+    }
+    setIsSending(false);
   };
 
   const formik = useFormik({
@@ -47,6 +65,14 @@ const Form = (): JSX.Element => {
     validationSchema: validationSchema,
     onSubmit,
   });
+
+  const onAlertErrorClose = () => {
+    setIsError(false);
+  };
+
+  const onAlertSuccessClose = () => {
+    setIsSuccess(false);
+  };
 
   return (
     <Box>
@@ -160,6 +186,26 @@ const Form = (): JSX.Element => {
             >
               Send the question
             </Button>
+            {isSending &&(
+              <Box sx={{ display: 'flex', width: '100%', justifyContent: 'center', alignItems: 'center', m: 5 }}>
+                <CircularProgress />
+              </Box>
+            )}
+            <ReCAPTCHA
+              sitekey={process.env.REACT_APP_CAPTCHA_SITE_KEY} 
+              ref={captchaRef}
+              size="invisible"
+            />
+            <Snackbar open={isError} autoHideDuration={6000} onClose={onAlertErrorClose} anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}>
+              <Alert onClose={onAlertErrorClose} severity="error" sx={{ width: '100%' }}>
+                There was an error processing your request. Please try again later.
+              </Alert>
+            </Snackbar>
+            <Snackbar open={isSuccess} autoHideDuration={6000} onClose={onAlertSuccessClose} anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}>
+              <Alert onClose={onAlertSuccessClose} severity="success" sx={{ width: '100%' }}>
+                Thank you for your message. We'll get back to you in 1-2 business days.
+              </Alert>
+            </Snackbar>
           </Grid>
           <Grid item container justifyContent={'center'} xs={12}>
             <Typography color="text.secondary">
