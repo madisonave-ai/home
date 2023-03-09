@@ -33,7 +33,7 @@ jobs:
         run: pwd && ls -lart
 
       - name: Build
-        run: npm run build:ci
+        run: . .env.ci; cross-env GENERATE_SOURCEMAP=false react-scripts build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
