@@ -46,7 +46,7 @@ const Form = (): JSX.Element => {
     setIsSending(true);
     const token = await captchaRef.current.executeAsync();
     values['token']=token;
-    const url=process.env.REACT_APP_CONTACT_FORM_URL;
+    const url='/api/contact-form';//process.env.REACT_APP_CONTACT_FORM_URL;
     const res=await fetch(url, {
       method: 'POST',
       body: JSON.stringify(values)
