@@ -38,8 +38,6 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             "senderAddress": f"{email_sender}",
         }
         poller = client.begin_send(message)
-        result = poller.result()
-        #logging.info(result)
         return func.HttpResponse(f"Message sent.", status_code=200)
     except Exception as e:
         logging.error(e)
