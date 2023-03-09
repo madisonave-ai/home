@@ -17,12 +17,6 @@
     "codeStyle:fix": "npm run prettier:fix && npm run eslint:fix",
     "clear-all": "rimraf ./build ./node_modules"
   },
-  "proxy": {
-    "/api/contact-form" : {
-      "target" : "https://fn.madisonave.ai/api/contact-form",
-      "changeOrigin" : true
-    }
-  },
   "eslintConfig": {
     "extends": [
       "react-app"
