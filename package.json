@@ -8,10 +8,10 @@
   "scripts": {
     "predeploy": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
     "deploy": "gh-pages -d build",
-    "start": "sh -ac '. .env.local; react-scripts start'",
-    "startwin-dev": "(for /F \"tokens=*\" %i in (.env.development) do set %i) && react-scripts start",
+    "start": "sh -ac '. .env.ci; react-scripts start'",
+    "startwin-dev": "(for /F \"tokens=*\" %i in (.env.ci) do set %i) && react-scripts start",
     "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
-    "build:ci": ". ./.env.ci; cross-env GENERATE_SOURCEMAP=false react-scripts build",
+    "build:ci": "sh -ac '. ./.env.ci; GENERATE_SOURCEMAP=false react-scripts build'",
     "prettier:fix": "prettier './src/**/*.{tsx,ts}' --write",
     "eslint:fix": "eslint ./src --fix",
     "codeStyle:fix": "npm run prettier:fix && npm run eslint:fix",
