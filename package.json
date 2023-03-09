@@ -11,7 +11,7 @@
     "start": "sh -ac '. .env.local; react-scripts start'",
     "startwin-dev": "(for /F \"tokens=*\" %i in (.env.development) do set %i) && react-scripts start",
     "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
-    "build:ci": ". .env.production; cross-env GENERATE_SOURCEMAP=false react-scripts build",
+    "build:ci": ". ./.env.ci; cross-env GENERATE_SOURCEMAP=false react-scripts build",
     "prettier:fix": "prettier './src/**/*.{tsx,ts}' --write",
     "eslint:fix": "eslint ./src --fix",
     "codeStyle:fix": "npm run prettier:fix && npm run eslint:fix",
