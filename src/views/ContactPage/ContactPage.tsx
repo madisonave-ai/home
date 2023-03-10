@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Main from 'layouts/Main';
 import Container from 'components/Container';
 import {
-  Contact,
+  // Contact,
   Form,
   Hero,
   // Newsletter
@@ -29,7 +29,7 @@ const ContactPage = (): JSX.Element => {
           <Hero />
         </Container>
       </Box>
-      <Contact />
+      {/* <Contact /> */}
       <Box bgcolor={'alternate.main'}>
         <Container>
           <Form />
