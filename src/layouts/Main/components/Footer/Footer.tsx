@@ -2,7 +2,7 @@ import React from 'react';
 import Grid from '@mui/material/Grid';
 // import Box from '@mui/material/Box';
 // import Button from '@mui/material/Button';
-// import Link from '@mui/material/Link';
+import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 // import { useTheme } from '@mui/material/styles';
 
@@ -83,7 +83,27 @@ const Footer = (): JSX.Element => {
           color="text.secondary"
           gutterBottom
         >
-          &copy; 2023 MadisonAve AI Inc. All rights reserved
+          &copy; 2023 MadisonAve AI Inc. All rights reserved.
+          <Link
+            sx={{ml:1}}
+            underline="none"
+            component="a"
+            href="/#/privacy"
+            color="text.secondary"
+            variant={'subtitle2'}
+          >
+            Privacy Policy
+          </Link>  
+          <Link
+            sx={{ml:1}}
+            underline="none"
+            component="a"
+            href="/#/terms"
+            color="text.secondary"
+            variant={'subtitle2'}
+          >
+            Terms of Use
+          </Link>
         </Typography>
         <Typography
           align={'center'}
