@@ -35,7 +35,7 @@ import {
   // PortfolioPage as PortfolioPageView,
   // PortfolioMasonry as PortfolioMasonryView,
   // PortfolioGrid as PortfolioGridView,
-  // CompanyTerms as CompanyTermsView,
+  CompanyTerms as CompanyTermsView,
   // ContactPageSidebarMap as ContactPageSidebarMapView,
   // ContactPageCover as ContactPageCoverView,
   // AboutSideCover as AboutSideCoverView,
@@ -68,6 +68,10 @@ const routes = [
   {
     path: '/privacy',
     renderer: (params = {}): JSX.Element => <PrivacyView {...params} />,
+  },
+  {
+    path: '/terms',
+    renderer: (params = {}): JSX.Element => <CompanyTermsView {...params} />,
   },
   {
     path: '/not-found-cover',
@@ -190,10 +194,6 @@ const routes = [
   // {
   //   path: '/portfolio-grid',
   //   renderer: (params = {}): JSX.Element => <PortfolioGridView {...params} />,
-  // },
-  // {
-  //   path: '/company-terms',
-  //   renderer: (params = {}): JSX.Element => <CompanyTermsView {...params} />,
   // },
   // {
   //   path: '/contact-sidebar-map',
